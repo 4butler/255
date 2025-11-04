@@ -1,67 +1,15 @@
-<!DOCTYPE html>
+<!DOCTYPE html>              
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>태양계 자동 스크롤</title>
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    overflow-x: auto;       /* 가로 스크롤 허용 */
-    overflow-y: hidden;     /* 세로 스크롤 제거 */
-    white-space: nowrap;    /* 행들이 한 줄로 표시 */
-    display: flex;
-    align-items: center;
-    background: radial-gradient(circle at center, #000010, #000000);
-  }
-
-  /* 앵커 태그가 인라인 요소이므로 flex 컨테이너 내부에서 정렬되도록 display를 설정합니다. */
-  a {
-    display: inline-flex; 
-    text-decoration: none; /* 링크 밑줄 제거 (필요하다면) */
-    align-items: center;   /* 이미지가 a 태그 중앙에 오도록 정렬 */
-  }
-
-  img {
-    border-radius: 10px;
-    margin-right: 50px;
-    transition: all 0.3s ease;
-  }
-
-  img:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-    cursor: pointer;
-  }
-</style>
+<title> solar system </title>
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <img src="picture/mercury.png" width="20px" height="20px">
-
-  <a href="sub/earth.html">
-    <img src="picture/earth.png" width="50px" height="50px">
+  <img id="sun-img" src="picture/sun.png" width="300px" height="300px">
+  
+  <a href="sub/planets.html">
+    <img id="planets-img" src="picture/planets.png" width="600px" height="600px"> 임시 사진
   </a>
-
-  <img src="picture/earth.png" width="53px" height="53px">
-  
-  <img src="picture/earth.png" width="100px" height="100px">
-  
-<script>
-  const speed = 5; // 스크롤 속도 조정
-  const edgeMargin = 100; // 마우스 감지 영역(px)
-
-  document.addEventListener('mousemove', (e) => {
-    const width = window.innerWidth;
-    const currentScroll = window.scrollX; // 현재 가로 스크롤 위치
-
-    if(e.clientX < edgeMargin) {
-      // 마우스 왼쪽에 있을 때 (왼쪽으로 스크롤)
-      window.scrollBy({ left: -speed, behavior: 'smooth' });
-    } else if(e.clientX > width - edgeMargin) {
-      // 마우스 오른쪽에 있을 때 (오른쪽으로 스크롤)
-      window.scrollBy({ left: speed, behavior: 'smooth' });
-    }
-  });
-</script>
 </body>
 </html>

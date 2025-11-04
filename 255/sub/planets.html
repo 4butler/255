@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>태양계 자동 스크롤</title>
+<style>
+  
+</style>
+</head>
+<body>
+  <!-- 태양계 이미지 (예시) -->
+  <img src="../picture/sun.png" width="200px" height="200px">
+  <img src="../picture/mercury.png" width="20px" height="20px">
+  <img src="../picture/earth.png" width="50px" height="50px">
+  <img src="../picture/earth.png" width="53px" height="53px">
+  <img src="../picture/earth.png" width="100px" height="100px">
+
+
+  
+<script> // ai 사용해서 만든 임시 기능
+  const speed = 5; // 스크롤 속도 조정
+  const edgeMargin = 100; // 마우스 감지 영역(px)
+
+  document.addEventListener('mousemove', (e) => {
+    const width = window.innerWidth;
+    if(e.clientX < edgeMargin) {
+      // 마우스 왼쪽에 있을 때
+      window.scrollBy({ left: -speed, behavior: 'smooth' });
+    } else if(e.clientX > width - edgeMargin) {
+      // 마우스 오른쪽에 있을 때
+      window.scrollBy({ left: speed, behavior: 'smooth' });
+    }
+  });
+</script>
+</body>
+</html>

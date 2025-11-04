@@ -1,0 +1,43 @@
+/* main.css */
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    overflow-x: auto;       
+    overflow-y: hidden;     
+    white-space: nowrap;    
+
+    display: flex;
+    align-items: center;
+
+    background: radial-gradient(circle at center, #000010, #000000);
+
+    position: relative;
+  }
+
+  img {
+    display: block;
+    
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+
+    transition: all 0.3s ease;
+  }
+
+  #sun-img {
+    z-index: 10;
+  }
+
+  #planets-img {
+    z-index: 9;
+  }
+
+  img:hover {
+    transform: translate(-50%, -50%) scale(1.1); 
+    filter: brightness(1.1);
+    cursor: pointer;
+  }
