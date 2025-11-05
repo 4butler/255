@@ -1,22 +1,19 @@
 body {
-    margin: 0;
-    height: 100vh;
-    overflow-x: auto;      /* 가로 스크롤 허용 */
-    overflow-y: hidden;    /* 세로 스크롤 제거 */
-    white-space: nowrap;   /* 행들이 한 줄로 표시 */
-    display: flex;
-    align-items: center;
-    background: radial-gradient(circle at center, #000010, #000000);
-  }
+  margin: 0;
+  height: 100vh;
+  overflow-x: auto;      /* 가로 스크롤 허용 */
+  overflow-y: hidden;    /* 세로 스크롤 제거 */
+  white-space: nowrap;   /* 행들이 한 줄로 표시 */
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at center, #000010, #000000);
+}
 
-  img {
-    border-radius: 10px;
-    margin-right: 50px;
-    transition: all 0.3s ease;
-  }
+#sun-img {
+  position: absolute;
+  left: 0;
+  width: 5000px;
+  height: 5000px;
+  transform: translateX(-99%);
+}
 
-  img:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-    cursor: pointer;
-  }
