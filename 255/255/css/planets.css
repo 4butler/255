@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow-x: auto;      /* 가로 스크롤 허용 */
+  overflow-y: hidden;    /* 세로 스크롤 제거 */
+  white-space: nowrap;   /* 행들이 한 줄로 표시 */
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at center, #000010, #000000);
+}
+
+.sun-mercury {
+    width: 300px;
+    height: 150px;
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px;
+    
+    /* 배경색을 RGBA로 설정: (빨강, 초록, 파랑, 투명도) */
+    /* 0, 123, 255는 파란색 RGB 값, 0.5는 50%의 투명도 */
+    background-color: rgba(0, 123, 255, 0.5); 
+    
+    /* 내용물의 색상은 불투명하게 유지 */
+    color: #333; 
+}
+
+#sun-img {
+  position: absolute;
+  left: 0;
+  width: 5000px;
+  height: 5000px;
+  transform: translateX(-99.5%);
+}
+
+button, input[type="button"] {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 5px;
+}
+        
+button:hover, input[type="button"]:hover {
+  background-color: brown;
+}
