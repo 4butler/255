@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>solar system</title>
+<link rel="stylesheet" href="../css/main.css">
+</head>
+
+
+<body>
+  <img id="sun-img" src="../picture/sun.png" width="300px" height="300px" alt="태양">
+
+  <a href="planets/planets.html">  
+    <img id="planets-img" src="../picture/planets.png" width="600px" height="600px" alt="행성들">
+  </a>
+
+  <div id="backdrop" aria-hidden="true"></div>
+
+  <aside id="sun-panel" role="dialog" aria-labelledby="sun-title" aria-modal="true">
+    <h2 id="sun-title">☀️ 태양 (Sun)</h2>
+    <div class="meta">분류: G2V 주계열성 · 태양계 중심 천체</div>
+    <p>
+      태양은 태양계의 중심에 위치한 G형 주계열성으로, <br>
+      질량의 약 73%가 수소, 25%가 헬륨으로 이루어진<br>
+      거대한 플라즈마 구체입니다. 핵융합 반응을 통해 <br>
+      빛과 열을 방출하며, 지구의 생명 유지에 필수적인 <br>
+      에너지를 제공합니다.
+    </p>
+    <ul>
+      <li>평균 반지름: 696,340 km</li>
+      <li>질량: 1.989 × 10<sup>30</sup> kg</li>
+      <li>표면 온도(대략): ~5,780 K</li>
+    </ul>
+    <button id="close-btn">닫기</button>
+  </aside>
+
+  <script>
+    const body = document.body;
+    const sun = document.getElementById('sun-img');
+    const closeBtn = document.getElementById('close-btn');
+    const backdrop = document.getElementById('backdrop');
+
+    function openSun() {
+      body.classList.add('focus-sun');     
+      sun.classList.add('active');       
+    }
+    function closeSun() {
+      body.classList.remove('focus-sun');
+      sun.classList.remove('active');
+    }
+
+    sun.addEventListener('click', openSun);
+    closeBtn.addEventListener('click', closeSun);
+    backdrop.addEventListener('click', closeSun);
+    window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeSun(); });
+  </script>
+</body>
+</html>

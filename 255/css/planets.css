@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow-x: auto;
+  /* 가로 스크롤 허용 */
+  overflow-y: hidden;
+  /* 세로 스크롤 제거 */
+  white-space: nowrap;
+  /* 행들이 한 줄로 표시 */
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at center, #000010, #000000);
+}
+
+.sun-mercury {
+  width: 50px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.mercury-venus {
+  width: 50px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.venus-earth {
+  width: 50px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.earth-mars {
+  width: 50px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.mars-jupiter {
+  width: 50px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.jupiter-saturn {
+  width: 50px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.saturn-uranus {
+  width: 50px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.uranus-neptune {
+  width: 50px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.sun-mercury {
+  width: 50px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+#sun-img {
+  position: absolute;
+  left: 0;
+  width: 5000px;
+  height: 5000px;
+  transform: translateX(-99.5%);
+}
+
+button,
+input[type="button"] {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 5px;
+}
+
+button:hover,
+input[type="button"]:hover {
+  background-color: brown;
+}
+
+
+/* 승준 */
+img[src$="jupiter.png"] {
+  transform: rotate(3deg);
+  transform-origin: center center;
+}
+
+img[src$="saturn.png"] {
+  transform: rotate(27deg);
+  transform-origin: center center;
+}
