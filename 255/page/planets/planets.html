@@ -1,64 +1,54 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title> solar system planets </title>
   <link rel="stylesheet" href="../../css/planets.css">
+  <script src="../../js/planets.js"></script>
 </head>
 
 
 <body>
 
-  <img id="sun-img" src="../../picture/psun.png">
+  <div class="wrapper">
+    <input type="checkbox" id="switch">
+    <label for="switch" class="switch_label">
+      <span class="onf_btn"></span>
+    </label>
+  </div>
+
+  <img id="sun" src="../../picture/psun.png">
   <div class="sun-mercury"> </div>
 
-  <img src="../../picture/mercury.png" width="10px" height="10px">
+  <img id="mercury" src="../../picture/mercury.png">
   <div class="mercury-venus"></div>
 
-  <img src="../../picture/venus.png" width="25px" height="25px">
+  <img id="venus" src="../../picture/venus.png">
   <div class="venus-earth"></div>
 
-  <a href="inearth/map.html">  
-    <img src="../../picture/earth.png" width="26px" height="26px">
+  <a href="inearth/map.html">
+    <img id="earth" src="../../picture/earth.png">
   </a>
   <div class="earth-mars"></div>
 
-  <img src="../../picture/mars.png" width="14px" height="14px">
+  <img id="mars" src="../../picture/mars.png">
   <div class="mars-jupiter"></div>
 
-  <img src="../../picture/jupiter.png" width="284px" height="284px">
+  <img id="jupiter" src="../../picture/jupiter.png">
   <div class="jupiter-saturn"></div>
 
-  <img src="../../picture/saturn.png" width="236px" height="236px">
+  <img id="saturn" src="../../picture/saturn.png">
   <div class="saturn-uranus"></div>
 
-  <img src="../../picture/uranus.png" width="103px" height="103px">
+  <img id="uranus" src="../../picture/uranus.png">
   <div class="uranus-neptune"></div>
 
-  <img src="../../picture/neptune.png" width="100px" height="100px">
-  <div class="neptune-end"></div>
-
-  <input type="button" value="버튼">
+  <img id="neptune" src="../../picture/neptune.png">
 
 
-  
-  <script> // ai 사용해서 만든 임시 기능
-    const speed = 5; // 스크롤 속도 조정
-    const edgeMargin = 100; // 마우스 감지 영역(px)
-
-    document.addEventListener('mousemove', (e) => {
-      const width = window.innerWidth;
-      if(e.clientX < edgeMargin) {
-        // 마우스 왼쪽에 있을 때
-        window.scrollBy({ left: -speed, behavior: 'smooth' });
-      } else if(e.clientX > width - edgeMargin) {
-        // 마우스 오른쪽에 있을 때
-        window.scrollBy({ left: speed, behavior: 'smooth' });
-      }
-    });
-  </script>
+  <script src="../../js/planets.js"></script>
 
 </body>
+
 </html>
-
-
