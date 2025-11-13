@@ -53,7 +53,7 @@ img:hover {
   z-index: 10;
 }
 
-#sun-img.sunActive {
+#sun-img.Active {
   left: 40%;
   transform: translate(-50%, -50%) scale(1.35);
   transition: 0.5s ease;

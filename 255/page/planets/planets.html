@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <title> solar system planets </title>
   <link rel="stylesheet" href="../../css/planets.css">
-  <script src="../../js/planets.js"></script>
 </head>
 
 
@@ -18,34 +17,183 @@
     </label>
   </div>
 
-  <img id="sun" src="../../picture/psun.png">
-  <div class="sun-mercury"> </div>
+
+  <a href="../main.html">
+    <img id="sun" src="../../picture/psun.png"> 
+  </a>
+  <div id="sun-mercury"> </div>
 
   <img id="mercury" src="../../picture/mercury.png">
-  <div class="mercury-venus"></div>
+  <div id="mercury-venus"></div>
 
   <img id="venus" src="../../picture/venus.png">
-  <div class="venus-earth"></div>
+  <div id="venus-earth"></div>
 
   <a href="inearth/map.html">
     <img id="earth" src="../../picture/earth.png">
   </a>
-  <div class="earth-mars"></div>
+  <div id="earth-mars"></div>
 
   <img id="mars" src="../../picture/mars.png">
-  <div class="mars-jupiter"></div>
+  <div id="mars-jupiter"></div>
 
   <img id="jupiter" src="../../picture/jupiter.png">
-  <div class="jupiter-saturn"></div>
+  <div id="jupiter-saturn"></div>
 
   <img id="saturn" src="../../picture/saturn.png">
-  <div class="saturn-uranus"></div>
+  <div id="saturn-uranus"></div>
 
   <img id="uranus" src="../../picture/uranus.png">
-  <div class="uranus-neptune"></div>
+  <div id="uranus-neptune"></div>
 
   <img id="neptune" src="../../picture/neptune.png">
 
+
+  <aside id="mercury-panel" role="dialog">
+    <h2> 수성 (Mercury)</h2>
+    <div class="meta">분류: G2V 주계열성 · 태양계 중심 천체</div>
+    <p>
+      태양은 태양계의 중심에 위치한 G형 주계열성으로, <br>
+      질량의 약 73%가 수소, 25%가 헬륨으로 이루어진<br>
+      거대한 플라즈마 구체입니다. 핵융합 반응을 통해 <br>
+      빛과 열을 방출하며, 지구의 생명 유지에 필수적인 <br>
+      에너지를 제공합니다.
+    </p>
+    <ul>
+      <li>평균 반지름: 696,340 km</li>
+      <li>질량: 1.989 × 10<sup>30</sup> kg</li>
+      <li>표면 온도(대략): ~5,780 K</li>
+    </ul>
+    <button id="close">닫기</button>
+  </aside>
+
+  <aside id="Venus-panel" role="dialog">
+    <h2> 금성 (Venus)</h2>
+    <div class="meta">분류: G2V 주계열성 · 태양계 중심 천체</div>
+    <p>
+      태양은 태양계의 중심에 위치한 G형 주계열성으로, <br>
+      질량의 약 73%가 수소, 25%가 헬륨으로 이루어진<br>
+      거대한 플라즈마 구체입니다. 핵융합 반응을 통해 <br>
+      빛과 열을 방출하며, 지구의 생명 유지에 필수적인 <br>
+      에너지를 제공합니다.
+    </p>
+    <ul>
+      <li>평균 반지름: 696,340 km</li>
+      <li>질량: 1.989 × 10<sup>30</sup> kg</li>
+      <li>표면 온도(대략): ~5,780 K</li>
+    </ul>
+    <button id="close">닫기</button>
+  </aside>
+
+  <aside id="지구-panel" role="dialog">
+    <h2> 지구 (Earth)</h2>
+    <div class="meta">분류: G2V 주계열성 · 태양계 중심 천체</div>
+    <p>
+      태양은 태양계의 중심에 위치한 G형 주계열성으로, <br>
+      질량의 약 73%가 수소, 25%가 헬륨으로 이루어진<br>
+      거대한 플라즈마 구체입니다. 핵융합 반응을 통해 <br>
+      빛과 열을 방출하며, 지구의 생명 유지에 필수적인 <br>
+      에너지를 제공합니다.
+    </p>
+    <ul>
+      <li>평균 반지름: 696,340 km</li>
+      <li>질량: 1.989 × 10<sup>30</sup> kg</li>
+      <li>표면 온도(대략): ~5,780 K</li>
+    </ul>
+    <button id="close">닫기</button>
+  </aside>
+
+  <aside id="Mars-panel" role="dialog">
+    <h2> 화성 (Marse)</h2>
+    <div class="meta">분류: G2V 주계열성 · 태양계 중심 천체</div>
+    <p>
+      태양은 태양계의 중심에 위치한 G형 주계열성으로, <br>
+      질량의 약 73%가 수소, 25%가 헬륨으로 이루어진<br>
+      거대한 플라즈마 구체입니다. 핵융합 반응을 통해 <br>
+      빛과 열을 방출하며, 지구의 생명 유지에 필수적인 <br>
+      에너지를 제공합니다.
+    </p>
+    <ul>
+      <li>평균 반지름: 696,340 km</li>
+      <li>질량: 1.989 × 10<sup>30</sup> kg</li>
+      <li>표면 온도(대략): ~5,780 K</li>
+    </ul>
+    <button id="close">닫기</button>
+  </aside>
+
+  <aside id="Jupiter-panel" role="dialog">
+    <h2> 목성 (Jupiter)</h2>
+    <div class="meta">분류: G2V 주계열성 · 태양계 중심 천체</div>
+    <p>
+      태양은 태양계의 중심에 위치한 G형 주계열성으로, <br>
+      질량의 약 73%가 수소, 25%가 헬륨으로 이루어진<br>
+      거대한 플라즈마 구체입니다. 핵융합 반응을 통해 <br>
+      빛과 열을 방출하며, 지구의 생명 유지에 필수적인 <br>
+      에너지를 제공합니다.
+    </p>
+    <ul>
+      <li>평균 반지름: 696,340 km</li>
+      <li>질량: 1.989 × 10<sup>30</sup> kg</li>
+      <li>표면 온도(대략): ~5,780 K</li>
+    </ul>
+    <button id="close">닫기</button>
+  </aside>
+
+  <aside id="Saturn-panel" role="dialog">
+    <h2> 토성 (Saturn)</h2>
+    <div class="meta">분류: G2V 주계열성 · 태양계 중심 천체</div>
+    <p>
+      태양은 태양계의 중심에 위치한 G형 주계열성으로, <br>
+      질량의 약 73%가 수소, 25%가 헬륨으로 이루어진<br>
+      거대한 플라즈마 구체입니다. 핵융합 반응을 통해 <br>
+      빛과 열을 방출하며, 지구의 생명 유지에 필수적인 <br>
+      에너지를 제공합니다.
+    </p>
+    <ul>
+      <li>평균 반지름: 696,340 km</li>
+      <li>질량: 1.989 × 10<sup>30</sup> kg</li>
+      <li>표면 온도(대략): ~5,780 K</li>
+    </ul>
+    <button id="close">닫기</button>
+  </aside>
+
+  <aside id="Uranus-panel" role="dialog">
+    <h2> 천왕성 (Uranus)</h2>
+    <div class="meta">분류: G2V 주계열성 · 태양계 중심 천체</div>
+    <p>
+      태양은 태양계의 중심에 위치한 G형 주계열성으로, <br>
+      질량의 약 73%가 수소, 25%가 헬륨으로 이루어진<br>
+      거대한 플라즈마 구체입니다. 핵융합 반응을 통해 <br>
+      빛과 열을 방출하며, 지구의 생명 유지에 필수적인 <br>
+      에너지를 제공합니다.
+    </p>
+    <ul>
+      <li>평균 반지름: 696,340 km</li>
+      <li>질량: 1.989 × 10<sup>30</sup> kg</li>
+      <li>표면 온도(대략): ~5,780 K</li>
+    </ul>
+    <button id="close">닫기</button>
+  </aside>
+
+  <aside id="Neptune-panel" role="dialog">
+    <h2> 해왕성 (Neptune)</h2>
+    <div class="meta">분류: G2V 주계열성 · 태양계 중심 천체</div>
+    <p>
+      태양은 태양계의 중심에 위치한 G형 주계열성으로, <br>
+      질량의 약 73%가 수소, 25%가 헬륨으로 이루어진<br>
+      거대한 플라즈마 구체입니다. 핵융합 반응을 통해 <br>
+      빛과 열을 방출하며, 지구의 생명 유지에 필수적인 <br>
+      에너지를 제공합니다.
+    </p>
+    <ul>
+      <li>평균 반지름: 696,340 km</li>
+      <li>질량: 1.989 × 10<sup>30</sup> kg</li>
+      <li>표면 온도(대략): ~5,780 K</li>
+    </ul>
+    <button id="close">닫기</button>
+  </aside>
+
+ 
 
   <script src="../../js/planets.js"></script>
 

@@ -5,13 +5,13 @@ let btn = document.getElementById('close');
 
 
 sun.addEventListener('click', function() {
-    sun.classList.toggle('sunActive');
+    sun.classList.toggle('Active');
     panel.classList.toggle('open')
     planets.classList.toggle('hide')
 })
 
 btn.addEventListener('click', function(){
-    sun.classList.remove('sunActive');
+    sun.classList.remove('Active');
     panel.classList.remove('open');
     planets.classList.remove('hide')
 })
