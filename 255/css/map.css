@@ -1,88 +1,35 @@
-:root {
-    --bg: #e8edf7;
-    --ink: #0b1b3f;
-    --base: #cfcfcf;
-    --hover: rgba(93, 168, 255, .35);
-    --active: rgba(93, 168, 255, .55);
-    --stroke: #ffffff;
-}
-
 body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: ui-sans-serif, system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif;
-    padding: 16px
+
 }
 
-h1 {
-    margin: 0 0 10px;
-    font-size: 20px
+img {
+
 }
 
-.map-wrap {
-    position: relative;
-    width: 1500px;
-    max-width: 98vw;
-    margin: 0 auto;
-    border: 2px solid #1c3972;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #eef3fb
+#Asia-img {
+  right: 5%;
 }
 
-#stage svg {
-    display: block;
-    width: 100%;
-    height: auto
+#Africa-img {
+  right: 10%;
 }
 
-/* 회색 통일 & 인터랙션 */
-.continent-part {
-    cursor: pointer
+#Europe-img {
+  right: 15%;
 }
 
-.continent-part * {
-    fill: var(--base) !important;
-    stroke: var(--stroke);
-    stroke-width: .6px
+#NorthAmerica-img {
+  right: 20%;
 }
 
-.continent-part:hover * {
-    fill: var(--hover) !important
+#SouthAmerica-img {
+  right: 25%;
 }
 
-.continent-active * {
-    fill: var(--active) !important
+#Oceania-img {
+  right: 30%;
 }
 
-.panel {
-    margin: 16px auto 0;
-    background: #102652;
-    color: #fff;
-    padding: 14px;
-    border-radius: 8px;
-    border: 1px solid #1e3e72;
-    width: 95%;
-    max-width: 720px
-}
-
-.item {
-    margin: 6px 0;
-    font-size: 15px
-}
-
-.chip {
-    display: inline-block;
-    padding: 2px 8px;
-    font-size: 12px;
-    background: #153b78;
-    border-radius: 999px;
-    margin-right: 6px
-}
-
-.hint {
-    font-size: 12px;
-    opacity: .8;
-    margin: 8px 0 0
+#Antarctica-img {
+  right: 35%;
 }

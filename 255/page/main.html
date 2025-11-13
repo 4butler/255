@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>solar system</title>
-<link rel="stylesheet" href="../css/main.css">
+  <meta charset="UTF-8">
+  <title>solar system</title>
+  <link rel="stylesheet" href="../css/main.css">
 </head>
 
 
 <body>
+
   <img id="sun-img" src="../picture/sun.png" width="300px" height="300px" alt="태양">
 
-  <a href="planets/planets.html">  
+  <a href="planets/planets.html">
     <img id="planets-img" src="../picture/planets.png" width="600px" height="600px" alt="행성들">
   </a>
-
-  <div id="backdrop" aria-hidden="true"></div>
 
   <aside id="sun-panel" role="dialog" aria-labelledby="sun-title" aria-modal="true">
     <h2 id="sun-title">☀️ 태양 (Sun)</h2>
@@ -31,28 +31,11 @@
       <li>질량: 1.989 × 10<sup>30</sup> kg</li>
       <li>표면 온도(대략): ~5,780 K</li>
     </ul>
-    <button id="close-btn">닫기</button>
+    <button id="close">닫기</button>
   </aside>
 
-  <script>
-    const body = document.body;
-    const sun = document.getElementById('sun-img');
-    const closeBtn = document.getElementById('close-btn');
-    const backdrop = document.getElementById('backdrop');
+  <script src="../js/main.js"></script>
 
-    function openSun() {
-      body.classList.add('focus-sun');     
-      sun.classList.add('active');       
-    }
-    function closeSun() {
-      body.classList.remove('focus-sun');
-      sun.classList.remove('active');
-    }
-
-    sun.addEventListener('click', openSun);
-    closeBtn.addEventListener('click', closeSun);
-    backdrop.addEventListener('click', closeSun);
-    window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeSun(); });
-  </script>
 </body>
+
 </html>

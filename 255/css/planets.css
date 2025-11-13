@@ -2,16 +2,15 @@ body {
   margin: 0;
   height: 100vh;
   overflow-x: auto;
-  /* 가로 스크롤 허용 */
   overflow-y: hidden;
-  /* 세로 스크롤 제거 */
   white-space: nowrap;
-  /* 행들이 한 줄로 표시 */
   display: flex;
   align-items: center;
   background: radial-gradient(circle at center, #000010, #000000);
 }
 
+
+/* one */
 .sun-mercury {
   width: 50px;
   height: 150px;
@@ -20,6 +19,8 @@ body {
   background-color: rgba(0, 0, 0, 0.0);
 }
 
+
+/* two */
 .mercury-venus {
   width: 50px;
   height: 150px;
@@ -28,6 +29,7 @@ body {
   background-color: rgba(0, 0, 0, 0.0);
 }
 
+/* three */
 .venus-earth {
   width: 50px;
   height: 150px;
@@ -36,6 +38,7 @@ body {
   background-color: rgba(0, 0, 0, 0.0);
 }
 
+/* four */
 .earth-mars {
   width: 50px;
   height: 150px;
@@ -44,6 +47,7 @@ body {
   background-color: rgba(0, 0, 0, 0.0);
 }
 
+/* five */
 .mars-jupiter {
   width: 50px;
   height: 150px;
@@ -52,6 +56,7 @@ body {
   background-color: rgba(0, 0, 0, 0.0);
 }
 
+/* six */
 .jupiter-saturn {
   width: 50px;
   height: 150px;
@@ -60,6 +65,7 @@ body {
   background-color: rgba(0, 0, 0, 0.0);
 }
 
+/* seven */
 .saturn-uranus {
   width: 50px;
   height: 150px;
@@ -68,6 +74,7 @@ body {
   background-color: rgba(0, 0, 0, 0.0);
 }
 
+/* eight */
 .uranus-neptune {
   width: 50px;
   height: 150px;
@@ -76,15 +83,12 @@ body {
   background-color: rgba(0, 0, 0, 0.0);
 }
 
-.sun-mercury {
-  width: 50px;
-  height: 150px;
-  padding: 20px;
-  margin: 20px;
-  background-color: rgba(0, 0, 0, 0.0);
+#switchchecked ~ #jupiter {
+  opacity: 0 !important;
 }
 
-#sun-img {
+
+#sun {
   position: absolute;
   left: 0;
   width: 5000px;
@@ -92,23 +96,46 @@ body {
   transform: translateX(-99.5%);
 }
 
-button,
-input[type="button"] {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin: 5px;
+
+
+#mercury {
+  width: 10px;
+  height: 10px;
 }
 
-button:hover,
-input[type="button"]:hover {
-  background-color: brown;
+#venus {
+  width: 25px;
+  height: 25px;
+}
+
+#earth {
+  width: 26px;
+  height: 26px;
+}
+
+#mars {
+  width: 14px;
+  height: 14px;
+}
+
+#jupiter {
+  width: 284px;
+  height: 284px;
+}
+
+#saturn {
+  width: 236px;
+  height: 236px;
+}
+
+#uranus {
+  width: 103px;
+  height: 103px;
+}
+
+#neptune {
+  width: 100px;
+  height: 100px;
 }
 
 
@@ -121,4 +148,68 @@ img[src$="jupiter.png"] {
 img[src$="saturn.png"] {
   transform: rotate(27deg);
   transform-origin: center center;
+}
+
+
+/* on/off button*/
+.wrapper {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: 50px auto;
+
+  position: fixed; 
+  top: 20px;       
+  left: 50%;       
+  transform: translateX(-50%); 
+
+  z-index: 10;   
+}
+#switch {
+  position: absolute;
+  /* hidden */
+  appearance: none;
+}
+
+.switch_label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  background: #fff;
+  border: 2px solid #daa;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.switch_label:hover {
+  background: #efefef;
+}
+.onf_btn {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #daa;
+  transition: 0.2s;
+}
+
+/* checking style */
+#switch:checked+.switch_label {
+  background: #c44;
+  border: 2px solid #c44;
+}
+
+#switch:checked+.switch_label:hover {
+  background: #e55;
+}
+
+/* move */
+#switch:checked+.switch_label .onf_btn {
+  left: 34px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
 }
