@@ -8,16 +8,26 @@ body {
   align-items: center;
   background: radial-gradient(circle at center, #000010, #000000);
 }
-div{
+
+div {
   width: 50px;
   height: 150px;
-  background-color: rgba(0, 0, 0, 0.0);
-  transition: transform 0.5s;;
+  background-color: rgba(0, 0, 0, 0);
+  transition: transform 0.5s;
 }
-img{
-  transform: translateX(20%);
-  transition: transform 0.5s;;
+
+img {
+  transition: transform 0.5s;
+  z-index : 10;  
 }
+
+img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+
 
 #sun {
   position: absolute;
@@ -27,38 +37,47 @@ img{
   transform: translate(-99.5%, -50%);
 
 }
+
 #mercury {
   width: 140px;
   height: 140px;
 }
+
 #venus {
   width: 190px;
   height: 190px;
 }
+
 #earth {
   width: 190px;
   height: 190px;
 }
+
 #mars {
   width: 140px;
   height: 140px;
 }
+
 #jupiter {
   width: 340px;
   height: 340px;
 }
+
 #saturn {
   width: 290px;
   height: 290px;
 }
+
 #uranus {
   width: 240px;
   height: 243px;
 }
+
 #neptune {
   width: 240px;
   height: 240px;
 }
+
 
 /* btn on*/
 /* 행성*/
@@ -66,59 +85,142 @@ img{
   width: 38px;
   height: 38px;
 }
+
 #venus.on {
   width: 95px;
   height: 95px;
 }
+
 #earth.on {
   width: 100px;
   height: 100px;
 }
+
 #mars.on {
   width: 53px;
   height: 53px;
 }
+
 #jupiter.on {
   width: 1097px;
   height: 1097px;
 }
+
 #saturn.on {
   width: 914px;
   height: 914px;
 }
+
 #uranus.on {
   width: 398px;
   height: 398px;
 }
+
 #neptune.on {
   width: 386px;
   height: 386px;
 }
+
 /*공백*/
 #sun-mercury.on {
   width: 454359px;
 }
+
 #mercury-venus.on {
   width: 394482px;
 }
+
 #venus-earth.on {
   width: 325669px;
 }
+
 #earth-mars.on {
   width: 614767px;
 }
+
 #mars-jupiter.on {
   width: 4323506px;
 }
+
 #jupiter-saturn.on {
   width: 5082870px;
 }
+
 #saturn-uranus.on {
   width: 11342993px;
 }
+
 #uranus-neptune.on {
   width: 12765137px;
 }
+
+
+/* 행성 클릭 시 */
+
+#mercury.Active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.35);
+  transition: 0.5s ease;
+}
+
+#venus.Active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.35);
+  transition: 0.5s ease;
+}
+
+#earth.Active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.35);
+  transition: 0.5s ease;
+}
+
+#mars.Active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.35);
+  transition: 0.5s ease;
+}
+
+#jupiter.Active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.35);
+  transition: 0.5s ease;
+}
+
+#saturn.Active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.35);
+  transition: 0.5s ease;
+}
+
+#uranus.Active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.35);
+  transition: 0.5s ease;
+}
+
+#neptune.Active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.35);
+  transition: 0.5s ease;
+}
+
 
 /* 설명 팝업 */
 aside {
@@ -137,18 +239,22 @@ aside {
   opacity: 0;
   transition: all 0.5s ease;
 }
+
 h2 {
   margin: 0 0 8px;
   font-size: 1.15rem;
 }
+
 .meta {
   font-size: .9rem;
   color: #b7c0d0;
   margin-bottom: 8px;
 }
+
 ul {
   margin: 8px 0 0 18px;
 }
+
 button {
   margin-top: 12px;
   background: #333;
@@ -157,9 +263,87 @@ button {
   border-radius: 8px;
   padding: 8px 12px;
   cursor: pointer;
+  z-index: 15;
 }
-#sun-panel.open {
-  opacity: 1 !important; 
+
+#mercury-panel.open {
+  opacity: 1 !important;
+}
+
+#venus-panel.open {
+  opacity: 1 !important;
+}
+
+#earth-panel.open {
+  opacity: 1 !important;
+}
+
+#mars-panel.open {
+  opacity: 1 !important;
+}
+
+#jupiter-panel.open {
+  opacity: 1 !important;
+}
+
+#saturn-panel.open {
+  opacity: 1 !important;
+}
+
+#uranus-panel.open {
+  opacity: 1 !important;
+}
+
+#neptune-panel.open {
+  opacity: 1 !important;
+}
+
+
+
+/* 행성 숨기기 */
+
+#sun.hide {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+#mercury.hide {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+#venus.hide {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+#earth.hide {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+#mars.hide {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+#jupiter.hide {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+#saturn.hide {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+#uranus.hide {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+#neptune.hide {
+  opacity: 0 !important;
+  pointer-events: none;
 }
 
 
@@ -171,17 +355,19 @@ button {
   text-align: center;
   margin: 50px auto;
 
-  position: fixed; 
-  top: 20px;       
-  left: 50%;       
-  transform: translateX(-50%); 
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 
-  z-index: 10;   
+  z-index: 10;
 }
+
 #switch {
   position: absolute;
   appearance: none;
 }
+
 .switch_label {
   position: relative;
   cursor: pointer;
@@ -193,9 +379,11 @@ button {
   border-radius: 20px;
   transition: 0.2s;
 }
+
 .switch_label:hover {
   background: #efefef;
 }
+
 .onf_btn {
   position: absolute;
   top: 4px;
@@ -207,15 +395,21 @@ button {
   background: #daa;
   transition: 0.2s;
 }
+
 #switch:checked+.switch_label {
   background: #c44;
   border: 2px solid #c44;
 }
+
 #switch:checked+.switch_label:hover {
   background: #e55;
 }
+
 #switch:checked+.switch_label .onf_btn {
   left: 34px;
   background: #fff;
   box-shadow: 1px 2px 3px #00000020;
 }
+
+
+

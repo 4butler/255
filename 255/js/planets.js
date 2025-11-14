@@ -21,19 +21,20 @@ let planet = [
 ];
 
 let panel = [
-    document.getElementById('Mercury-panel'),
-    document.getElementById('Venus-panel'),
-    document.getElementById('Earth-panel'),
-    document.getElementById('Mars-panel'),
-    document.getElementById('Jupiter-panel'),
-    document.getElementById('Saturn-panel'),
-    document.getElementById('Uranus-panel'),
-    document.getElementById('Neptune-panel')
+    document.getElementById('mercury-panel'),
+    document.getElementById('venus-panel'),
+    document.getElementById('earth-panel'),
+    document.getElementById('mars-panel'),
+    document.getElementById('jupiter-panel'),
+    document.getElementById('saturn-panel'),
+    document.getElementById('uranus-panel'),
+    document.getElementById('neptune-panel')
 
 ];
 
 let onfbtn = document.getElementById('switch');
 let btn = document.getElementById('close');
+let sun = document.getElementById('sun');
 let check = -1;
 
 /* 행성 크기 조절 온오프 버튼 */
@@ -54,14 +55,26 @@ onfbtn.addEventListener('change', () => {
 });
 
 /* 행성 소개 */
-planet[0].addEventListener('click', function () {
-    planet[0].classList.toggle('Active');
-    panel[0].classList.toggle('open')
-    planets.classList.toggle('hide')
-})
+planet.forEach((plan, num) => {
+    plan.addEventListener('click', function () {
+        let check = num;
+        plan.classList.toggle('Active');
+        panel[num].classList.toggle('open');
+        planet.forEach((p, i) => {
+            if (i === check) return;
+            p.classList.toggle('hide');
+        });
+        sun.classList.toggle('hide');
+    });
+});
 
 btn.addEventListener('click', function () {
-    sun.classList.remove('sunActive');
-    panel.classList.remove('open');
-    planets.classList.remove('hide')
+    planet[check].classList.remove('Active');
+    panel[check].classList.remove('open');
+    for (let i = 0; i < planet.length; i++) {
+        if (i == check) continue;
+        planet[i].classList.remove('hide');
+    }
+    sun.classList.remove('hide');
+    check = -1;
 })
