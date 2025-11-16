@@ -3,20 +3,123 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>map</title>
+    <title>Earth Continents</title>
     <link rel="stylesheet" href="../../../css/map.css">
 </head>
 
 <body>
-    <img id="Asia-img" src="../../../picture/Asia.png"  alt="아시아">
-    <img id="Africa-img" src="../../../picture/Africa.png"  alt="아프리카">
-    <img id="NorthAmerica-img" src="../../../picture/NorthAmerica.png"  alt="북아메리카">
-    <img id="SouthAmerica-img" src="../../../picture/SouthAmerica.png"  alt="남아메리카">
-    <img id="Antarctica-img" src="../../../picture/Antarctica.png" alt="남극">
-    <img id="Europe-img" src="../../../picture/Europe.png" alt="유럽">
-    <img id="Oceania-img" src="../../../picture/Oceania.png" alt="오세아니아">
 
+    <img id="asia" src="../../../picture/Asia.png" alt="아시아">
+    <img id="africa" src="../../../picture/Africa.png" alt="아프리카">
+    <img id="northamerica" src="../../../picture/NorthAmerica.png" alt="북아메리카">
+    <img id="southamerica" src="../../../picture/SouthAmerica.png" alt="남아메리카">
+    <img id="antarctica" src="../../../picture/Antarctica.png" alt="남극">
+    <img id="europe" src="../../../picture/Europe.png" alt="유럽">
+    <img id="oceania" src="../../../picture/Oceania.png" alt="오세아니아">
+
+
+  
+    <aside id="asia-panel" role="dialog">
+        <h2>아시아 (Asia)</h2>
+        <div class="meta">세계에서 가장 큰 대륙</div>
+        <p>
+            아시아는 세계에서 가장 넓은 면적과 가장 많은 인구를 가진 대륙입니다.<br>
+            동아시아, 동남아시아, 서아시아, 중앙아시아 등 다양한 문화권과 국가들이 존재합니다.
+        </p>
+        <ul>
+            <li>면적: 약 4,450만 km²</li>
+            <li>대표 국가: 대한민국, 중국, 일본, 인도 등</li>
+            <li>특징: 다양한 기후, 인구 대륙 1위</li>
+        </ul>
+        <button class="close">닫기</button>
+    </aside>
+
+    <aside id="africa-panel" role="dialog">
+        <h2>아프리카 (Africa)</h2>
+        <div class="meta">인류의 기원지로 알려진 대륙</div>
+        <p>
+            아프리카는 인류가 처음 등장한 대륙으로 알려져 있으며,<br>
+            사하라 사막과 다양한 생태계를 보유하고 있습니다.
+        </p>
+        <ul>
+            <li>면적: 약 3,030만 km²</li>
+            <li>대표 국가: 이집트, 나이지리아, 남아프리카 공화국 등</li>
+            <li>특징: 사막·초원·밀림 등 다양한 지형</li>
+        </ul>
+        <button class="close">닫기</button>
+    </aside>
+
+    <aside id="northamerica-panel" role="dialog">
+        <h2>북아메리카 (North America)</h2>
+        <div class="meta">선진국 중심의 경제 대륙</div>
+        <p>
+            미국·캐나다를 중심으로 높은 경제력과 첨단 산업을 가진 대륙입니다.
+        </p>
+        <ul>
+            <li>면적: 약 2,470만 km²</li>
+            <li>대표 국가: 미국, 캐나다, 멕시코</li>
+            <li>특징: 다양하고 안정적인 기후</li>
+        </ul>
+        <button class="close">닫기</button>
+    </aside>
+
+    <aside id="southamerica-panel" role="dialog">
+        <h2>남아메리카 (South America)</h2>
+        <div class="meta">아마존과 대자연의 대륙</div>
+        <p>
+            브라질의 아마존 열대우림을 비롯해 다양한 자연 환경을 가진 대륙입니다.
+        </p>
+        <ul>
+            <li>면적: 약 1,780만 km²</li>
+            <li>대표 국가: 브라질, 아르헨티나, 칠레</li>
+            <li>특징: 열대·온대·고산 기후</li>
+        </ul>
+        <button class="close">닫기</button>
+    </aside>
+
+    <aside id="antarctica-panel" role="dialog">
+        <h2>남극 (Antarctica)</h2>
+        <div class="meta">지구 최남단의 얼음 대륙</div>
+        <p>
+            남극은 대부분이 두꺼운 얼음으로 덮여 있으며,<br>
+            지구에서 가장 추운 기후를 가진 지역입니다.
+        </p>
+        <ul>
+            <li>면적: 약 1,420만 km²</li>
+            <li>특징: 빙하, 극지방 연구의 중심</li>
+        </ul>
+        <button class="close">닫기</button>
+    </aside>
+
+    <aside id="europe-panel" role="dialog">
+        <h2>유럽 (Europe)</h2>
+        <div class="meta">역사·문화의 중심지</div>
+        <p>
+            유럽은 인문주의, 산업혁명, 과학혁명의 중심지로 인류 발전에 큰 영향을 끼친 지역입니다.
+        </p>
+        <ul>
+            <li>면적: 약 1,010만 km²</li>
+            <li>대표 국가: 영국, 프랑스, 독일 등</li>
+            <li>특징: 안정된 기후, 문화적 다양성</li>
+        </ul>
+        <button class="close">닫기</button>
+    </aside>
+
+    <aside id="oceania-panel" role="dialog">
+        <h2>오세아니아 (Oceania)</h2>
+        <div class="meta">섬으로 이루어진 대륙</div>
+        <p>
+            오세아니아는 호주, 뉴질랜드, 태평양의 여러 섬들로 이뤄진 지역입니다.
+        </p>
+        <ul>
+            <li>면적: 약 850만 km²</li>
+            <li>대표 국가: 호주, 뉴질랜드</li>
+            <li>특징: 온화한 기후, 독특한 생태계</li>
+        </ul>
+        <button class="close">닫기</button>
+    </aside>
+    <script src="../../../js/map.js"></script>
 
 </body>
 
-</html> 
+</html>
