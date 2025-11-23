@@ -29,24 +29,29 @@ let panel = [
     document.getElementById('saturn-panel'),
     document.getElementById('uranus-panel'),
     document.getElementById('neptune-panel')
-
 ];
 
+let satellite = [
+    document.getElementById('earth-moon'),
+    document.getElementById('mars-phobos'),
+    document.getElementById('jupiter-ganymede'),
+    document.getElementById('saturn-titan'),
+    document.getElementById('uranus-titania'),
+]
+
 let onfbtn = document.getElementById('switch');
-let btn = document.getElementById('close');
 let sun = document.getElementById('sun');
+let earthDetailyBtn = document.getElementById('earth_detaily');
+let closeBtns = document.querySelectorAll('.close');
 let check = -1;
 
-/* 행성 크기 조절 온오프 버튼 */
 onfbtn.addEventListener('change', () => {
     if (onfbtn.checked) {
         for (let i = 0; i < link.length; i++) {
             link[i].classList.toggle('on');
             planet[i].classList.toggle('on');
         }
-    }
-
-    else {
+    } else {
         for (let i = 0; i < link.length; i++) {
             link[i].classList.remove('on');
             planet[i].classList.remove('on');
@@ -54,12 +59,12 @@ onfbtn.addEventListener('change', () => {
     }
 });
 
-/* 행성 소개 */
 planet.forEach((plan, num) => {
     plan.addEventListener('click', function () {
-        let check = num;
+        check = num;
         plan.classList.toggle('Active');
         panel[num].classList.toggle('open');
+        
         planet.forEach((p, i) => {
             if (i === check) return;
             p.classList.toggle('hide');
@@ -68,13 +73,21 @@ planet.forEach((plan, num) => {
     });
 });
 
-btn.addEventListener('click', function () {
-    planet[check].classList.remove('Active');
-    panel[check].classList.remove('open');
-    for (let i = 0; i < planet.length; i++) {
-        if (i == check) continue;
-        planet[i].classList.remove('hide');
-    }
-    sun.classList.remove('hide');
-    check = -1;
-})
+closeBtns.forEach(button => {
+    button.addEventListener('click', function () {
+        if (check === -1) return;
+
+        planet[check].classList.remove('Active');
+        panel[check].classList.remove('open');
+        for (let i = 0; i < planet.length; i++) {
+            if (i == check) continue;
+            planet[i].classList.remove('hide');
+        }
+        sun.classList.remove('hide');
+        check = -1;
+    })
+});
+
+earthDetailyBtn.addEventListener('click', function (event) {
+    location.href = 'inearth/map.html';
+});
