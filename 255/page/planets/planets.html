@@ -24,25 +24,30 @@
   <div id="sun-mercury"> </div>
 
   <img id="mercury" src="../../picture/mercury.png">
-  <div id="mercury-venus"></div>
+  <div id="mercury-venus"></div>  
 
   <img id="venus" src="../../picture/venus.png">
   <div id="venus-earth"></div>
 
   <img id="earth" src="../../picture/earth.png">
   <div id="earth-mars"></div>
+  <img id="earth-moon" src="../../picture/moon.png">
 
   <img id="mars" src="../../picture/mars.png">
   <div id="mars-jupiter"></div>
+  <img id="mars-phobos" src="../../picture/mars-phobos.png">
 
   <img id="jupiter" src="../../picture/jupiter.png">
   <div id="jupiter-saturn"></div>
+  <img id="jupiter-ganymede" src="../../picture/jupiter-ganymede.png">
 
   <img id="saturn" src="../../picture/saturn.png">
   <div id="saturn-uranus"></div>
+  <img id="saturn-titan" src="../../picture/saturn-titan.png">
 
   <img id="uranus" src="../../picture/uranus.png">
   <div id="uranus-neptune"></div>
+  <img id="uranus-titania" src="../../picture/uranus-titania.png">
 
   <img id="neptune" src="../../picture/neptune.png">
 
@@ -53,18 +58,18 @@
     <div class="meta">분류: 지구형 행성 · 태양에 가장 가까운 행성</div>
     <p>
       수성은 태양에 가장 가까운 지구형 행성으로, <br>
-      내부 구성은 약 70%에 달하는 거대한 철·니켈  <br>
+      내부 구성은 약 70%에 달하는 거대한 철·니켈 <br>
       금속 핵과 약 30%의 실리케이트 암석 맨틀로 <br>
       이루어져 있습니다. 대기는 거의 존재하지 않아 <br>
       극심한 온도 변화가 일어나며, 표면은 <br>
       충돌 크레이터와 고지대로 뒤덮여 있습니다.<br>
     </p>
     <ul>
-      <li>평균 반지름: 2,439.7 km</li> 
-      <li>질량: 3.3011 × 10<sup>23</sup> kg</li> 
+      <li>평균 반지름: 2,439.7 km</li>
+      <li>질량: 3.3011 × 10<sup>23</sup> kg</li>
       <li>표면 온도(대략): 낮 최고 ~700 K, 밤 최저 ~100 K</li>
     </ul>
-    <button id="close">닫기</button>
+    <button class="close">닫기</button>
   </aside>
 
   <aside id="venus-panel" role="dialog">
@@ -79,11 +84,11 @@
       460도 이상을 유지합니다.<br>
     </p>
     <ul>
-      <li>평균 반지름: 6,051.8 km</li> 
-      <li>질량: 4.8675 × 10<sup>24</sup> kg</li> 
+      <li>평균 반지름: 6,051.8 km</li>
+      <li>질량: 4.8675 × 10<sup>24</sup> kg</li>
       <li>표면 온도(평균): ~737 K (약 464°C)</li>
     </ul>
-    <button id="close">닫기</button>
+    <button class="close">닫기</button>
   </aside>
 
   <aside id="earth-panel" role="dialog">
@@ -97,12 +102,12 @@
       이루어져 있으며, 액체 물이 풍부해 다양한 생태계를 유지합니다.<br>
     </p>
     <ul>
-      <li>평균 반지름: 6,371 km</li> 
-      <li>질량: 5.97237 × 10<sup>24</sup> kg</li> 
+      <li>평균 반지름: 6,371 km</li>
+      <li>질량: 5.97237 × 10<sup>24</sup> kg</li>
       <li>표면 온도(평균): ~288 K (약 15°C)</li>
     </ul>
-    <button id="close">닫기</button>
-    <button id="earth_detaily" onclick="location.href='inearth/map.html'"> 더 자세히 보기 </button>
+    <button class="close">닫기</button>
+    <button id="earth_detaily"> 지구 더 자세히 보기 </button>
   </aside>
 
   <aside id="mars-panel" role="dialog">
@@ -117,11 +122,11 @@
       남아 있으며 거대한 화산과 협곡이 존재합니다.<br>
     </p>
     <ul>
-      <li>평균 반지름: 3,389.5 km</li> 
-      <li>질량: 6.4171 × 10<sup>23</sup> kg</li> 
+      <li>평균 반지름: 3,389.5 km</li>
+      <li>질량: 6.4171 × 10<sup>23</sup> kg</li>
       <li>표면 온도(평균): ~210 K (약 −63°C)</li>
     </ul>
-    <button id="close">닫기</button>
+    <button class="close">닫기</button>
   </aside>
 
   <aside id="jupiter-panel" role="dialog">
@@ -136,11 +141,11 @@
       거대한 대기 폭풍인 대적점이 대표적인 특징입니다.<br>
     </p>
     <ul>
-      <li>평균 반지름: 69,911 km</li> 
-      <li>질량: 1.8982 × 10<sup>27</sup> kg</li> 
+      <li>평균 반지름: 69,911 km</li>
+      <li>질량: 1.8982 × 10<sup>27</sup> kg</li>
       <li>대기 상층 온도(평균): ~165 K</li>
     </ul>
-    <button id="close">닫기</button>
+    <button class="close">닫기</button>
   </aside>
 
   <aside id="saturn-panel" role="dialog">
@@ -154,11 +159,11 @@
       추정되며, 낮은 밀도로 인해 물보다 가벼운 특성을 보입니다.<br>
     </p>
     <ul>
-      <li>평균 반지름: 58,232 km</li> 
-      <li>질량: 5.6834 × 10<sup>26</sup> kg</li> 
+      <li>평균 반지름: 58,232 km</li>
+      <li>질량: 5.6834 × 10<sup>26</sup> kg</li>
       <li>대기 상층 온도(평균): ~134 K</li>
     </ul>
-    <button id="close">닫기</button>
+    <button class="close">닫기</button>
   </aside>
 
   <aside id="uranus-panel" role="dialog">
@@ -173,11 +178,11 @@
       기울어져 있는 독특한 회전 특성을 가집니다.<br>
     </p>
     <ul>
-      <li>평균 반지름: 25,362 km</li> 
-      <li>질량: 8.6810 × 10<sup>25</sup> kg</li> 
+      <li>평균 반지름: 25,362 km</li>
+      <li>질량: 8.6810 × 10<sup>25</sup> kg</li>
       <li>대기 상층 온도(평균): ~76 K</li>
     </ul>
-    <button id="close">닫기</button>
+    <button class="close">닫기</button>
   </aside>
 
   <aside id="neptune-panel" role="dialog">
@@ -192,11 +197,11 @@
       가장 빠른 초고속 바람이 관측되는 행성입니다.<br>
     </p>
     <ul>
-      <li>평균 반지름: 24,622 km</li> 
-      <li>질량: 1.02413 × 10<sup>26</sup> kg</li> 
+      <li>평균 반지름: 24,622 km</li>
+      <li>질량: 1.02413 × 10<sup>26</sup> kg</li>
       <li>대기 상층 온도(평균): ~72 K</li>
     </ul>
-    <button id="close">닫기</button>
+    <button class="close">닫기</button>
   </aside>
 
 
