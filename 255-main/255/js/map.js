@@ -2,18 +2,18 @@ let continents = [
   document.getElementById('asia'),
   document.getElementById('africa'),
   document.getElementById('europe'),
-  document.getElementById('northAmerica'),
-  document.getElementById('southAmerica'),
+  document.getElementById('northamerica'),
+  document.getElementById('southamerica'),
   document.getElementById('oceania'),
   document.getElementById('antarctica')
 ];
 
-let panel = [
+let panels = [
   document.getElementById('asia-panel'),
   document.getElementById('africa-panel'),
   document.getElementById('europe-panel'),
-  document.getElementById('northAmerica-panel'),
-  document.getElementById('southAmerica-panel'),
+  document.getElementById('northamerica-panel'),
+  document.getElementById('southamerica-panel'),
   document.getElementById('oceania-panel'),
   document.getElementById('antarctica-panel')
 ];
@@ -22,8 +22,8 @@ let backcontinents = [
   document.getElementById('backasia'),
   document.getElementById('backafrica'),
   document.getElementById('backeurope'),
-  document.getElementById('backnorthAmerica'),
-  document.getElementById('backsouthAmerica'),
+  document.getElementById('backnorthamerica'),
+  document.getElementById('backsouthamerica'),
   document.getElementById('backoceania'),
   document.getElementById('backantarctica')
 ];
@@ -31,12 +31,13 @@ let backcontinents = [
 let closeBtns = document.querySelectorAll('.close');
 let check = -1;
 
-backcontinent.forEach((con, num) => {
+backcontinents.forEach((con, num) => {
   con.addEventListener('click', function () {
     check = num;
-    con.classList.toggle('Active'); 
-    panel[num].classList.toggle('open');
-    conet.forEach((c, i) => {
+    continents[num].classList.toggle('Active');
+    panels[num].classList.toggle('open');
+
+    continents.forEach((c, i) => {
       if (i === check) return;
       c.classList.toggle('hide');
     });
@@ -44,15 +45,17 @@ backcontinent.forEach((con, num) => {
 });
 
 closeBtns.forEach(button => {
-    button.addEventListener('click', function () {
-        if (check === -1) return;
+  button.addEventListener('click', function () {
+    if (check === -1) return;
 
-        continents[check].classList.remove('Active');
-        panel[check].classList.remove('open');
-        for (let i = 0; i < continents.length; i++) {
-            if (i == check) continue;
-            continents[i].classList.remove('hide');
-        }
-        check = -1;
-    })
+    continents[check].classList.remove('Active');
+    panels[check].classList.remove('open');
+
+    continents.forEach((c, i) => {
+      if (i === check) return;
+      c.classList.remove('hide');
+    });
+
+    check = -1;
+  });
 });
