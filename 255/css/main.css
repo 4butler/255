@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  height: 100vh;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  display: flex;
+  align-items: center;
+
+  background: radial-gradient(circle at center, #000010, #000000);
+
+  position: relative;
+}
+
+img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+img:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+
+
+/* 행성 */
+
+#planets-img {
+  z-index: 9;
+}
+
+#planets-img.hide {
+  opacity: 0 !important; 
+  pointer-events: none;
+}
+
+
+
+/* 태양 */
+
+#sun-img {
+  z-index: 10;
+}
+
+#sun-img.Active {
+  left: 40%;
+  transform: translate(-50%, -50%) scale(1.35);
+  transition: 0.5s ease;
+}
+
+
+
+
+/* 태양 설명 */
+
+#sun-panel {
+  position: fixed;
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+  width: min(420px, 42vw);
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 18px 16px;
+  line-height: 1.55;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+
+#sun-panel h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+#sun-panel .meta {
+  font-size: .9rem;
+  color: #b7c0d0;
+  margin-bottom: 8px;
+}
+
+#sun-panel ul {
+  margin: 8px 0 0 18px;
+}
+
+#sun-panel button {
+  margin-top: 12px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#sun-panel.open {
+  opacity: 1 !important; 
+}
