@@ -125,65 +125,46 @@ img:hover {
 }
 
 #venus.Active {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.35);
-  transition: 0.5s ease;
+  transform: translate(20vw);
+  width: 250px;
+  height: 250px;
   pointer-events: none;
 }
 
 #earth.Active {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.35);
-  transition: 0.5s ease;
+  transform: translate(10vw);
+  width: 250px;
+  height: 250px;
   pointer-events: none;
 }
 
 #mars.Active {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.35);
-  transition: 0.5s ease;
+  width: 250px;
+  height: 250px;
   pointer-events: none;
 }
 
 #jupiter.Active {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.35);
-  transition: 0.5s ease;
+  transform: translate(-10vw);
+  width: 250px;
+  height: 250px;
   pointer-events: none;
 }
 
 #saturn.Active {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.35);
-  transition: 0.5s ease;
+  transform: translate(-30vw) scale(2.5);
   pointer-events: none;
 }
 
 #uranus.Active {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.35);
-  transition: 0.5s ease;
+  transform: translate(-45vw) scale(2.5);
   pointer-events: none;
 }
 
 #neptune.Active {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.35);
-  transition: 0.5s ease;
+  transform: translate(-58vw);
+  width: 250px;
+  height: 250px;
   pointer-events: none;
 }
 
@@ -366,4 +347,5 @@ button {
   left: 34px;
   background: #fff;
   box-shadow: 1px 2px 3px #00000020;
+
 }
