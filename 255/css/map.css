@@ -11,6 +11,24 @@ img {
   transform-origin: top left;
   display: block;
   transform: scale(0.45);  
+  transition: all 0.9s ease;
+}
+
+button {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 12px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 #asia,
@@ -40,10 +58,115 @@ img {
 #southamerica-container:hover #southamerica,
 #antarctica-container:hover #antarctica,
 #oceania-container:hover #oceania {
-  transform: translate(-4%, -4%) scale(0.5);
-  filter: brightness(1.1);
+  filter: brightness(0.7);
   cursor: pointer;
 }
+
+#asia.asiaActive,
+#africa.asiaActive,
+#europe.asiaActive,
+#northamerica.asiaActive,
+#southamerica.asiaActive,
+#antarctica.asiaActive,
+#oceania.asiaActive {
+  transform: translate(-85%, 0%) scale(1.6); 
+
+}
+#asia.asiaActive {
+  filter: brightness(0.4);
+}
+
+#asia.africaActive,
+#africa.africaActive,
+#europe.africaActive,
+#northamerica.africaActive,
+#southamerica.africaActive,
+#antarctica.africaActive,
+#oceania.africaActive {
+  transform: translate(-60%, -30%) scale(1.6); 
+}
+#africa.africaActive{
+  filter: brightness(0.4);
+}
+
+#asia.europeActive,
+#africa.europeActive,
+#europe.europeActive,
+#northamerica.europeActive,
+#southamerica.europeActive,
+#antarctica.europeActive,
+#oceania.europeActive {
+  transform: scale(1);
+}
+
+#asia.northamericaActive,
+#africa.northamericaActive,
+#europe.northamericaActive,
+#northamerica.northamericaActive,
+#southamerica.northamericaActive,
+#antarctica.northamericaActive,
+#oceania.northamericaActive {
+  transform: scale(1);
+}
+
+#asia.southamericaActive,
+#africa.southamericaActive,
+#europe.southamericaActive,
+#northamerica.southamericaActive,
+#southamerica.southamericaActive,
+#antarctica.southamericaActive,
+#oceania.southamericaActive {
+  transform: scale(1);
+}
+
+#asia.antarcticaActive,
+#africa.antarcticaActive,
+#europe.antarcticaActive,
+#northamerica.antarcticaActive,
+#southamerica.antarcticaActive,
+#antarctica.antarcticaActive,
+#oceania.antarcticaActive {
+  transform: scale(1);
+}
+
+#asia.oceaniaActive,
+#africa.oceaniaActive,
+#europe.oceaniaActive,
+#northamerica.oceaniaActive,
+#southamerica.oceaniaActive,
+#antarctica.oceaniaActive,
+#oceania.oceaniaActive {
+  transform: scale(1);
+}
+
+[id^="back"].asiaActive {
+  pointer-events: none;
+}
+
+[id^="back"].africaActive {
+  pointer-events: none;
+}
+
+[id^="back"].europeActive {
+  pointer-events: none;
+}
+
+[id^="back"].northamericaActive {
+  pointer-events: none;
+}
+
+[id^="back"].southamericaActive {
+  pointer-events: none;
+}
+
+[id^="back"].oceaniaActive {
+  pointer-events: none;
+}
+
+[id^="back"].antarcticaActive {
+  pointer-events: none;
+}
+
 
 #backoceania {
   width: 700px !important;
@@ -108,6 +231,51 @@ img {
 }
 
 
+/* 설명 팝업 */
+aside {
+  position: fixed;
+  top: 100%;
+  right: 15%;
+  transform: translateY(-50%);
+  width: min(420px, 42vw);
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 18px 16px;
+  line-height: 1.55;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.8s ease;
+  pointer-events: auto;
+  z-index: 5;
+}
 
+h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.meta {
+  font-size: .9rem;
+  color: #b7c0d0;
+  margin-bottom: 8px;
+}
+
+ul {
+  margin: 8px 0 0 18px;
+}
+
+#asia-panel.open,
+#africa-panel.open,
+#europe-panel.open,
+#northamerica-panel.open,
+#southamerica-panel.open,
+#oceania-panel.open,
+#antarctica-panel.open {
+  top: 50%;
+  right: 15%;
+  opacity: 1 !important;
+}
 
 

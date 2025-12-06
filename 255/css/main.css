@@ -9,7 +9,7 @@ body {
   display: flex;
   align-items: center;
 
-  background: radial-gradient(circle at center, #000010, #000000);
+   background-image: url('../picture/mainbackground.png');
 
   position: relative;
 }
