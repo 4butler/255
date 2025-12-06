@@ -6,8 +6,12 @@ body {
   white-space: nowrap;
   display: flex;
   align-items: center;
-  background: radial-gradient(circle at center, #000010, #000000);
-  gap: 40px;
+  gap: 100px;
+
+  background-image: url('../picture/background.png');
+  background-position: top center;
+  background-attachment: fixed;
+  background-color: black;
 }
 
 
@@ -19,7 +23,7 @@ img {
 
 button {
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%);
   margin-top: 12px;
@@ -31,7 +35,12 @@ button {
   cursor: pointer;
   z-index: 100;
   opacity: 0;
-  pointer-events: none;
+  pointer-events: auto;
+}
+
+#earth_detaily {
+  top: 110%;
+  opacity: 1;
 }
 
 img:hover {
@@ -44,12 +53,27 @@ img:hover {
 #venus.Active:hover,
 #earth.Active:hover,
 #mars.Active:hover,
-#jupiter.Active:hover,
-#saturn.Active:hover,
-#uranus.Active:hover,
-#neptune.Active:hover {
-  transform: translate(75%) scale(1.1);
+#jupiter.Active:hover {
+  transform: translate(165%) scale(1.1);
 }
+
+#saturn.Active:hover,
+#uranus.Active:hover {
+  transform: translate(128%) scale(1.1);
+}
+
+#neptune.Active:hover {
+  transform: translate(165%) scale(1.1);
+}
+
+#earth-moon.Active:hover,
+#mars-phobos.Active:hover,
+#jupiter-ganymede.Active:hover,
+#saturn-titan.Active:hover,
+#uranus-titania.Active:hover {
+  transform: scale(1.1);
+}
+
 
 #sun {
   position: absolute;
@@ -57,7 +81,11 @@ img:hover {
   width: 5000px;
   height: 5000px;
   transform: translate(-99.5%, -50%);
+}
 
+#gaap {
+  width: 1px;
+  height: 140px;
 }
 
 #mercury {
@@ -88,12 +116,11 @@ img:hover {
 #saturn {
   width: 290px;
   height: 290px;
-  z-index: 20;
 }
 
 #uranus {
-  width: 240px;
-  height: 243px;
+  width: 300px;
+  height: 300px;
 }
 
 #neptune {
@@ -108,7 +135,6 @@ img:hover {
 #uranus-titania {
   position: absolute;
   opacity: 0;
-  pointer-events: none; 
   width: 100px;
   height: 100px;
   top: 45%;
@@ -117,58 +143,71 @@ img:hover {
 }
 
 /* 행성 클릭 시 */
-
 #close.Active {
+  position: fixed;
   transition: all 0.5s ease;
   opacity: 1 !important;
   pointer-events: auto !important;
 }
 
 #mercury.Active {
-  position: absolute;
+  position: fixed;
   transform: translate(30vw);
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
 }
 
 #venus.Active {
-  transform: translate(20vw);
-  width: 250px;
-  height: 250px;
+  position: fixed;
+  transform: translate(30vw);
+  width: 350px;
+  height: 350px;
 }
 
 #earth.Active {
-  transform: translate(10vw);
-  width: 250px;
-  height: 250px;
+  position: fixed;
+  transform: translate(30vw);
+  width: 350px;
+  height: 350px;
 }
 
 #mars.Active {
-  width: 250px;
-  height: 250px;
+  position: fixed;
+  transform: translate(30vw);
+  width: 350px;
+  height: 350px;
 }
 
 #jupiter.Active {
-  transform: translate(-10vw);
-  width: 250px;
-  height: 250px;
+  position: fixed;
+  transform: translate(30vw);
+  width: 350px;
+  height: 350px;
 }
 
 #saturn.Active {
-  transform: translate(-30vw) scale(2.5);
+  position: fixed;
+  transform: translate(30vw);
+  width: 450px;
+  height: 450px;
 }
 
 #uranus.Active {
-  transform: translate(-45vw) scale(2.5);
+  position: fixed;
+  transform: translate(30vw);
+  width: 450px;
+  height: 450px;
 }
 
 #neptune.Active {
-  transform: translate(-58vw);
-  width: 250px;
-  height: 250px;
+  position: fixed;
+  transform: translate(30vw);
+  width: 350px;
+  height: 350px;
 }
 
 #earth-moon.Active {
+  position: fixed;
   top: 50%;
   left: 10%;
   width: 250px;
@@ -178,6 +217,7 @@ img:hover {
 }
 
 #mars-phobos.Active {
+  position: fixed;
   top: 50%;
   left: 10%;
   width: 250px;
@@ -187,6 +227,7 @@ img:hover {
 }
 
 #jupiter-ganymede.Active {
+  position: fixed;
   top: 50%;
   left: 10%;
   width: 250px;
@@ -196,6 +237,7 @@ img:hover {
 }
 
 #saturn-titan.Active {
+  position: fixed;
   top: 50%;
   left: 10%;
   width: 250px;
@@ -205,6 +247,7 @@ img:hover {
 }
 
 #uranus-titania.Active {
+  position: fixed;
   top: 50%;
   left: 10%;
   width: 250px;
@@ -261,7 +304,7 @@ img:hover {
 aside {
   position: fixed;
   top: 100%;
-  right: 20%;
+  right: 15%;
   transform: translateY(-50%);
   width: min(420px, 42vw);
   background: rgba(0, 0, 0, 0.9);
@@ -301,7 +344,7 @@ ul {
 #uranus-panel.open,
 #neptune-panel.open {
   top: 50%;
-  right: 20%;
+  right: 15%;
   opacity: 1 !important;
 }
 
@@ -317,6 +360,22 @@ ul {
 #neptune.hide {
   opacity: 0 !important;
   pointer-events: none;
+}
+
+.planetContent {
+  display: none;
+}
+
+.planetContent.Active {
+  display: block;
+}
+
+.satelliteContent {
+  display: none;
+}
+
+.satelliteContent.Active {
+  display: block;
 }
 
 /* on/off button*/
